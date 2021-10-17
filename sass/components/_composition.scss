@@ -10,19 +10,42 @@
     transition: all 0.2s;
     outline-offset: 2rem;
 
+    @include respond(tab-port) {
+      position: relative;
+      float: left;
+      width: 33.3333%;
+    }
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;
+
+      @include respond(tab-port) {
+        top: 0;
+      }
     }
 
     &--p2 {
       right: 0;
       top: 2rem;
+
+      @include respond(tab-port) {
+        top: 0;
+      }
     }
 
     &--p3 {
       left: 20%;
       top: 10rem;
+
+      @include respond(tab-port) {
+        top: 0;
+        left: 0;
+      }
     }
 
     &:hover {
